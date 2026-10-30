@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Certified Carpet Care Inc | Carpet Cleaning Edmonton</title>
+<meta name="description" content="Certified Carpet Care Inc has served the Edmonton area for over 30 years with carpet, upholstery, duct and furnace cleaning. Call 780-464-3552 for an estimate.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --teal:#00AEC3; --teal-d:#076775; --teal-x:#064A55; --ink:#4D4D4F; --ink-d:#26292b;
+  --cream:#F6F1E7; --sand:#E9DFC9; --white:#fff;
+  --display:'Anton','Impact','Arial Narrow',sans-serif;
+  --body:'Figtree','Segoe UI',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink-d);background:var(--cream);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.01em;line-height:1.02;text-transform:uppercase}
+
+/* top strip */
+.strip{background:var(--teal-x);color:#cfeff3;font-size:14px}
+.strip .wrap{display:flex;justify-content:space-between;gap:16px;padding:9px 0;flex-wrap:wrap}
+.strip a{text-decoration:none;font-weight:600}
+.strip a:hover{color:#fff}
+
+/* header */
+header.site{background:var(--cream);position:sticky;top:0;z-index:50;border-bottom:3px solid var(--teal)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:12px 0}
+.brand img{height:46px;width:auto}
+nav.main{display:flex;gap:30px;align-items:center}
+nav.main a{text-decoration:none;font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.06em;position:relative;padding:6px 0}
+nav.main a::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:0;background:var(--teal);transition:width .25s}
+nav.main a:hover::after,nav.main a.on::after{width:100%}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--teal-d);color:#fff;text-decoration:none;font-weight:700;padding:13px 24px;border-radius:6px;transition:transform .2s,background .2s;border:2px solid var(--teal-d)}
+.btn:hover{background:var(--teal-x);transform:translateY(-2px)}
+.btn.alt{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+.btn.alt:hover{background:#fff;color:var(--teal-x)}
+.btn.light{background:#fff;color:var(--teal-x);border-color:#fff}
+.btn.light:hover{background:var(--sand)}
+.menu-btn{display:none;background:none;border:2px solid var(--ink-d);border-radius:6px;padding:8px 12px;font:700 14px var(--body);cursor:pointer}
+
+/* hero */
+.hero{background:var(--teal-d);color:#fff;position:relative;overflow:hidden;padding:84px 0 150px}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(circle at 85% 20%,rgba(0,174,195,.45),transparent 45%),
+  repeating-linear-gradient(0deg,rgba(255,255,255,.035) 0 2px,transparent 2px 9px)}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.eyebrow{display:inline-block;font-weight:700;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#bff3fa;border-bottom:2px solid var(--teal);padding-bottom:6px;margin-bottom:22px}
+.hero h1{font-size:clamp(46px,6.4vw,88px);margin-bottom:24px}
+.hero h1 em{font-style:normal;color:var(--teal);text-shadow:3px 3px 0 var(--teal-x)}
+.hero p.lead{font-size:19px;max-width:520px;color:#e3f6f8;margin-bottom:34px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+.photo{position:relative;justify-self:end;width:100%;max-width:520px}
+.photo .frame{background:#fff;padding:12px;border-radius:10px;transform:rotate(2.5deg);box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.photo .frame img{border-radius:4px;width:100%}
+.photo .tag{position:absolute;left:-34px;bottom:-34px;background:var(--cream);color:var(--teal-x);padding:16px 22px;border-radius:4px;transform:rotate(-4deg);box-shadow:0 14px 30px rgba(0,0,0,.3);border-left:8px solid var(--teal)}
+.photo .tag b{font-family:var(--display);font-weight:400;font-size:46px;line-height:1;display:block}
+.photo .tag span{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+/* vacuum track edge */
+.tracks{position:absolute;left:0;right:0;bottom:-1px;height:70px;
+  background:repeating-linear-gradient(90deg,var(--cream) 0 38px,transparent 38px 46px);
+  clip-path:polygon(0 100%,0 40%,100% 0,100% 100%)}
+.tracks::after{content:"";position:absolute;inset:0;background:var(--cream);clip-path:polygon(0 100%,0 62%,100% 22%,100% 100%)}
+
+/* questions */
+.ask{padding:40px 0 100px}
+.ask .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:start}
+.ask .side{position:sticky;top:110px}
+.ask .side h2{font-size:clamp(38px,4.6vw,60px);color:var(--teal-d);margin-bottom:20px}
+.ask .side p{font-size:18px;max-width:420px}
+.qlist{list-style:none;counter-reset:q}
+.qlist li{counter-increment:q;display:grid;grid-template-columns:70px 1fr;align-items:center;padding:30px 0;border-top:2px solid var(--ink-d);font-family:var(--display);text-transform:uppercase;font-size:clamp(26px,3.3vw,44px);line-height:1.1;transition:padding .25s,color .25s}
+.qlist li:last-child{border-bottom:2px solid var(--ink-d)}
+.qlist li::before{content:counter(q,decimal-leading-zero);font-family:var(--body);font-weight:700;font-size:15px;color:var(--teal-d);letter-spacing:.1em}
+.qlist li:hover{padding-left:14px;color:var(--teal-d)}
+.help{margin-top:34px;display:inline-block;background:var(--teal);color:#fff;padding:14px 26px;font-weight:700;font-size:19px;border-radius:4px;box-shadow:6px 6px 0 var(--teal-x)}
+
+/* services */
+.services{background:var(--sand);padding:100px 0;position:relative}
+.services .head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:56px}
+.services h2{font-size:clamp(42px,5.4vw,72px)}
+.services .head p{max-width:380px;font-weight:600}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.tiles{display:grid;gap:26px;position:relative}
+.tile{display:block;text-decoration:none;position:relative;background:var(--teal);color:#fff;padding:34px 34px 30px;clip-path:polygon(0 0,calc(100% - 34px) 0,100% 34px,100% 100%,0 100%);transition:transform .25s}
+.tile:nth-child(1){margin-right:60px}
+.tile:nth-child(2){margin-left:60px;background:var(--teal-d)}
+.tile:nth-child(3){margin-right:30px;background:var(--ink-d)}
+.tile:hover{transform:translateX(8px)}
+.tile small{display:block;font-weight:600;font-size:17px;opacity:.92;margin-bottom:12px;max-width:320px}
+.tile h3{font-size:42px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.tile h3 i{font-style:normal;font-family:var(--body);font-size:30px;width:50px;height:50px;border-radius:50%;background:#fff;color:var(--teal-x);display:grid;place-items:center;flex:none;transition:transform .25s}
+.tile:hover h3 i{transform:rotate(-45deg)}
+.board{background:var(--cream);padding:36px 38px;border:3px solid var(--ink-d);box-shadow:10px 10px 0 var(--teal)}
+.board h3{font-size:30px;color:var(--teal-d);margin-bottom:6px}
+.board .sub{font-size:15px;margin-bottom:18px;color:var(--ink)}
+.board ol{list-style:none;counter-reset:s}
+.board li{counter-increment:s;display:flex;gap:16px;align-items:baseline;padding:13px 0;border-bottom:1px dashed #9b9488;font-weight:600;font-size:18px}
+.board li:last-child{border:0}
+.board li::before{content:counter(s,decimal-leading-zero);font-family:var(--display);color:var(--teal);font-size:20px;min-width:28px}
+
+/* reputation */
+.rep{background:var(--ink-d);color:#fff;padding:100px 0;position:relative;overflow:hidden}
+.rep::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 60px,rgba(255,255,255,.03) 60px 62px)}
+.rep .wrap{position:relative;display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center}
+.rep h2{font-size:clamp(34px,4.3vw,58px);margin-bottom:24px}
+.rep h2 span{color:var(--teal)}
+.rep p{font-size:19px;color:#d6dadc;max-width:620px;margin-bottom:14px}
+.spec{border:2px solid var(--teal);padding:36px;position:relative}
+.spec .lbl{position:absolute;top:-14px;left:24px;background:var(--ink-d);padding:0 12px;color:var(--teal);font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase}
+.spec h3{font-size:40px}
+.spec p{font-size:16px;margin:14px 0 0;color:#b9bfc2}
+
+/* affiliation */
+.aff{padding:70px 0;background:var(--cream)}
+.aff .wrap{display:flex;align-items:center;justify-content:center;gap:48px;flex-wrap:wrap;text-align:left}
+.aff h2{font-size:clamp(30px,3.4vw,44px);color:var(--teal-d)}
+.aff .logo{background:#fff;padding:18px 30px;border-radius:50% / 14%;box-shadow:0 10px 24px rgba(0,0,0,.1)}
+.aff .logo img{height:110px;width:auto}
+
+/* contact */
+.contact{background:var(--teal);color:#fff;padding:90px 0;position:relative;overflow:hidden}
+.contact::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.07) 0 2px,transparent 2px 14px)}
+.contact .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.contact h2{font-size:clamp(40px,5.4vw,74px);margin-bottom:18px;text-shadow:4px 4px 0 var(--teal-d)}
+.contact p{font-size:19px;max-width:460px}
+.card{background:var(--cream);color:var(--ink-d);padding:38px;border-radius:6px;box-shadow:12px 12px 0 var(--teal-x)}
+.card .ph{font-family:var(--display);font-size:clamp(40px,5vw,62px);color:var(--teal-d);text-decoration:none;display:block;line-height:1;margin-bottom:22px;letter-spacing:.02em}
+.card .row{padding:14px 0;border-top:1px dashed #9b9488;font-weight:600;word-break:break-word}
+.card .row small{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-d);font-weight:700}
+.card .row a{text-decoration:none}
+.card .row a:hover{text-decoration:underline}
+.card .btn{margin-top:20px;width:100%;justify-content:center}
+
+/* footer */
+footer{background:var(--cream);padding:46px 0 34px;border-top:6px solid var(--teal-x)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+footer img{height:44px;width:auto}
+footer .meta{font-size:14px;text-align:right}
+footer .meta a{font-weight:700;color:var(--teal-d);text-decoration:none;border-bottom:2px solid var(--teal)}
+footer .meta a:hover{color:var(--teal-x)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s,transform .7s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media(max-width:960px){
+  nav.main{display:none;position:absolute;top:100%;left:0;right:0;background:var(--cream);flex-direction:column;align-items:flex-start;padding:20px;gap:16px;border-bottom:3px solid var(--teal)}
+  nav.main.open{display:flex}
+  .menu-btn{display:block}
+  .hdr-cta{display:none}
+  .hero{padding:56px 0 120px}
+  .hero .wrap,.ask .wrap,.svc-grid,.rep .wrap,.contact .wrap{grid-template-columns:1fr;gap:44px}
+  .photo{justify-self:center;max-width:440px;margin-bottom:30px}
+  .ask .side{position:static}
+  .tile:nth-child(n){margin-left:0;margin-right:0}
+  .qlist li{grid-template-columns:48px 1fr}
+}
+@media(max-width:560px){
+  body{font-size:16px}
+  .strip .wrap{justify-content:center;text-align:center}
+  .photo .tag{left:-8px;bottom:-26px}
+  .board,.card,.spec{padding:26px 22px}
+  .tile h3{font-size:34px}
+  footer .wrap,footer .meta{flex-direction:column;text-align:center;align-items:center}
+}
+</style>
+</head>
+<body>
+
+<div class="strip"><div class="wrap">
+  <span>Serving the Edmonton area</span>
+  <span><a href="tel:7804643552">780-464-3552</a> &nbsp;|&nbsp; <a href="mailto:info@certifiedcarpetcare.ca">info@certifiedcarpetcare.ca</a></span>
+</div></div>
+
+<header class="site"><div class="wrap">
+  <a class="brand" href="#top"><img src="assets/logo.png" alt="Certified Carpet Care"></a>
+  <button class="menu-btn" aria-label="Menu" onclick="document.querySelector('nav.main').classList.toggle('open')">Menu</button>
+  <nav class="main">
+    <a href="#top" class="on">Home</a>
+    <a href="#services">Carpet Cleaning</a>
+    <a href="#services">Furnace Cleaning</a>
+    <a href="#contact">Contact Us</a>
+  </nav>
+  <a class="btn hdr-cta" href="tel:7804643552">Call 780-464-3552</a>
+</div></header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">Certified Carpet Care Inc</span>
+      <h1>Serving the <em>Edmonton</em> area for over 30 years</h1>
+      <p class="lead">Effective carpet, upholstery, duct and furnace cleaning for homeowners and business owners.</p>
+      <div class="cta">
+        <a class="btn light" href="#contact">Request an estimate</a>
+        <a class="btn alt" href="#services">Our services</a>
+      </div>
+    </div>
+    <div class="photo">
+      <div class="frame"><img src="assets/banner.jpg" alt="Carpet and upholstery cleaning" width="1152" height="408"></div>
+      <div class="tag"><b>30+</b><span>Years in Edmonton</span></div>
+    </div>
+  </div>
+  <div class="tracks"></div>
+</section>
+
+<section class="ask">
+  <div class="wrap">
+    <div class="side rv">
+      <h2>Certified Carpet Care Inc is here to help</h2>
+      <p>We utilize effective and safe products to provide you with excellent results. You can count on us.</p>
+    </div>
+    <div class="rv">
+      <ul class="qlist">
+        <li>Are your carpets looking worn from years of use?</li>
+        <li>Do you have upholstery stains?</li>
+        <li>Would you like to improve the air quality of your home?</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="head rv">
+      <h2>Our<br>services</h2>
+      <p>Providing effective carpet, upholstery, duct and furnace cleaning in the Edmonton area.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="tiles rv">
+        <a class="tile" href="#services"><small>Have tough stains and dirt removed.</small><h3>Carpet Cleaning <i>&rarr;</i></h3></a>
+        <a class="tile" href="#services"><small>Improve your property's air quality.</small><h3>Furnace Cleaning <i>&rarr;</i></h3></a>
+        <a class="tile" href="#contact"><small>Request a convenient estimate.</small><h3>Contact Us <i>&rarr;</i></h3></a>
+      </div>
+      <div class="board rv">
+        <h3>Our services include</h3>
+        <p class="sub">but are not limited to:</p>
+        <ol>
+          <li>Carpet deodorizing &amp; disinfection</li>
+          <li>Carpet steam cleaning</li>
+          <li>Ecofriendly carpet &amp; upholstery cleaning</li>
+          <li>Oriental &amp; Persian carpet cleaning</li>
+          <li>Wool carpet cleaning</li>
+          <li>Area rug cleaning</li>
+          <li>Spot cleaning</li>
+          <li>Stain treatment</li>
+          <li>Furnace maintenance</li>
+          <li>Duct cleaning</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="rep">
+  <div class="wrap">
+    <div class="rv">
+      <h2>A reputation built <span>by word of mouth</span></h2>
+      <p>For over 30 years, we have been serving homeowners and business owners in the Edmonton area.</p>
+      <p>We stand behind our reputation which has grown by word-of-mouth from customer to customer.</p>
+    </div>
+    <div class="spec rv">
+      <span class="lbl">Specialties</span>
+      <h3>Carpet cleaning and care</h3>
+    </div>
+  </div>
+</section>
+
+<section class="aff">
+  <div class="wrap rv">
+    <h2>Professional<br>Affiliations</h2>
+    <div class="logo"><img src="assets/nadca.png" alt="NADCA, the HVAC Inspection, Maintenance and Restoration Association"></div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="rv">
+      <h2>Contact us today</h2>
+      <p>Contact us today to request a competitive estimate.</p>
+    </div>
+    <div class="card rv">
+      <a class="ph" href="tel:7804643552">780-464-3552</a>
+      <div class="row"><small>Email</small><a href="mailto:info@certifiedcarpetcare.ca">info@certifiedcarpetcare.ca</a></div>
+      <div class="row"><small>Sales</small><a href="mailto:sales@certifiedcarpetcare.ca">sales@certifiedcarpetcare.ca</a></div>
+      <a class="btn" href="mailto:info@certifiedcarpetcare.ca">Request an estimate</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo.png" alt="Certified Carpet Care">
+    <div class="meta">
+      <div>&copy; <span id="yr">2026</span> Certified Carpet Care Inc. All rights reserved.</div>
+      <div>Design by <a href="https://cleanningdigital.com/" target="_blank" rel="noopener">Cleaning Digital</a>.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
